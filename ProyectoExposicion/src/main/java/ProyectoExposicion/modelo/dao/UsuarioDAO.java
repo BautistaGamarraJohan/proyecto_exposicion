@@ -9,8 +9,11 @@ public class UsuarioDAO {
 
     public UsuarioDAO() {
         // Agregamos algunos usuarios de prueba
-        usuarios.put("admin", new Usuario("admin", "123456"));
-        usuarios.put("user", new Usuario("user", "123456"));
+        usuarios.put("johan", new Usuario("johan", "johan2115"));
+        usuarios.put("kimber", new Usuario("kimber", "kimber123"));
+        usuarios.put("andy", new Usuario("andy", "andy123"));
+        usuarios.put("carlos", new Usuario("carlos", "carlos123"));
+        
     }
 
     public boolean validarUsuario(String nombreUsuario, String contraseña) {
