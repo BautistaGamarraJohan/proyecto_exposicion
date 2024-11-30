@@ -18,20 +18,29 @@ public class MenuPrincipalControlador {
 
     public void iniciarMenu() {
         boolean salir = false;
-
+        
         while (!salir) {
             int opcion = menuVista.mostrarMenuPrincipal();
-
+            
             switch (opcion) {
-                case 1 -> generarPerfilVacunacion();
-                case 2 -> generarCoberturaDemografica();
-                case 3 -> generarAvanceGeografico();
-                case 4 -> generarReporteDosis();
-                case 5 -> {
+                case 1:
+                    generarPerfilVacunacion();
+                    break;
+                case 2:
+                    generarCoberturaDemografica();
+                    break;
+                case 3:
+                    generarAvanceGeografico();
+                    break;
+                case 4:
+                    generarReporteDosis();
+                    break;
+                case 5:
                     salir = true;
                     System.out.println("\nCerrando sesión...");
-                }
-                default -> menuVista.mostrarMensajeError();
+                    break;
+                default:
+                    menuVista.mostrarMensajeError();
             }
         }
     }
@@ -40,7 +49,18 @@ public class MenuPrincipalControlador {
         int totalVacunados = vacunacionDAO.getTotalVacunados();
         Map<String, Integer> distribucionGrupos = vacunacionDAO.getDistribucionPorGrupoRiesgo();
         Map<String, Double> porcentajesGrupos = vacunacionDAO.calcularPorcentajes(distribucionGrupos);
-        reporteVista.mostrarPerfilVacunacion(totalVacunados, distribucionGrupos, porcentajesGrupos);
+        Map<String, Integer> distribucionDiresa = vacunacionDAO.getDistribucionPorDiresa();
+        Map<String, Integer> distribucionClasificacion = vacunacionDAO.getDistribucionPorClasificacion();
+        Map<String, Integer> distribucionTipoEdad = vacunacionDAO.getDistribucionPorTipoEdad();
+        
+        reporteVista.mostrarPerfilVacunacion(
+            totalVacunados, 
+            distribucionGrupos, 
+            porcentajesGrupos,
+            distribucionDiresa,
+            distribucionClasificacion,
+            distribucionTipoEdad
+        );
     }
 
     private void generarCoberturaDemografica() {
@@ -59,6 +79,7 @@ public class MenuPrincipalControlador {
     private void generarReporteDosis() {
         Map<String, Integer> distribucionDosis = vacunacionDAO.getDistribucionPorDosis();
         Map<String, Integer> avanceFecha = vacunacionDAO.getAvancePorFecha();
-        reporteVista.mostrarReporteDosis(distribucionDosis, avanceFecha);
+        Map<String, Integer> distribucionFabricante = vacunacionDAO.getDistribucionPorFabricante();
+        reporteVista.mostrarReporteDosis(distribucionDosis, avanceFecha, distribucionFabricante);
     }
 }

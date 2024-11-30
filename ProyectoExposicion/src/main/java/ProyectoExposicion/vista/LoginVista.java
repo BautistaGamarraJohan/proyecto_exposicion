@@ -10,10 +10,10 @@ public class LoginVista {
     }
 
     public String[] mostrarLogin() {
-        System.out.println("\n=== SISTEMA DE VACUNACIÓN - INICIO DE SESIÓN ===");
+        System.out.println("\n=== SISTEMA DE VACUNACION - INICIO DE SESION ===");
         System.out.print("Usuario: ");
         String nombreUsuario = scanner.nextLine();
-        System.out.print("Contraseña: ");
+        System.out.print("Contrasena: ");
         String contraseña = scanner.nextLine();
         
         return new String[]{nombreUsuario, contraseña};
@@ -25,6 +25,6 @@ public class LoginVista {
     }
 
     public void mostrarExito() {
-        System.out.println("¡Inicio de sesión exitoso!");
+        System.out.println("Inicio de sesion exitoso!");
     }
 }

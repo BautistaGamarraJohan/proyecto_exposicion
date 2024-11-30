@@ -40,9 +40,6 @@ public class VacunacionDAO {
         return distribucion;
     }
 
-    // Aquí agregar los demás métodos...
-
-    // Métodos para Cobertura Demográfica
     public Map<String, Integer> getCoberturaPorSexo() {
         Map<String, Integer> distribucion = new HashMap<>();
         for (Vacunacion v : vacunaciones) {
@@ -58,8 +55,7 @@ public class VacunacionDAO {
         }
         return distribucion;
     }
-
-    // Métodos para Avance Geográfico
+    
     public Map<String, Integer> getVacunacionPorDepartamento() {
         Map<String, Integer> distribucion = new HashMap<>();
         for (Vacunacion v : vacunaciones) {
@@ -84,7 +80,6 @@ public class VacunacionDAO {
         return distribucion;
     }
 
-    // Métodos para Reporte de Dosis Aplicadas
     public Map<String, Integer> getDistribucionPorDosis() {
         Map<String, Integer> distribucion = new HashMap<>();
         for (Vacunacion v : vacunaciones) {
@@ -111,5 +106,36 @@ public class VacunacionDAO {
         }
         
         return porcentajes;
+    }
+    public Map<String, Integer> getDistribucionPorFabricante() {
+        Map<String, Integer> distribucion = new HashMap<>();
+        for (Vacunacion v : vacunaciones) {
+            distribucion.merge(v.getFabricante(), 1, Integer::sum);
+        }
+        return distribucion;
+    }
+    
+    public Map<String, Integer> getDistribucionPorDiresa() {
+        Map<String, Integer> distribucion = new HashMap<>();
+        for (Vacunacion v : vacunaciones) {
+            distribucion.merge(v.getDiresa(), 1, Integer::sum);
+        }
+        return distribucion;
+    }
+
+    public Map<String, Integer> getDistribucionPorClasificacion() {
+        Map<String, Integer> distribucion = new HashMap<>();
+        for (Vacunacion v : vacunaciones) {
+            distribucion.merge(v.getClasificacionVacuna(), 1, Integer::sum);
+        }
+        return distribucion;
+    }
+
+    public Map<String, Integer> getDistribucionPorTipoEdad() {
+        Map<String, Integer> distribucion = new HashMap<>();
+        for (Vacunacion v : vacunaciones) {
+            distribucion.merge(v.getTipoEdad(), 1, Integer::sum);
+        }
+        return distribucion;
     }
 }

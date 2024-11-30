@@ -6,7 +6,7 @@ import ProyectoExposicion.controlador.MenuPrincipalControlador;
 public class Principal {
     public static void main(String[] args) {
         try {
-            System.out.println("Iniciando sistema de vacunación...");
+            System.out.println("Iniciando sistema de vacunacion...");
             LoginControlador loginControlador = new LoginControlador();
             
             if (loginControlador.iniciarSesion()) {

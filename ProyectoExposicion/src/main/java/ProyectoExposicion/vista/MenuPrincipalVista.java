@@ -10,17 +10,17 @@ public class MenuPrincipalVista {
     }
 
     public int mostrarMenuPrincipal() {
-        System.out.println("\n=== MENÚ PRINCIPAL - SISTEMA DE VACUNACIÓN ===");
-        System.out.println("1. Perfil de Vacunación");
-        System.out.println("2. Cobertura Demográfica");
-        System.out.println("3. Avance Geográfico");
+        System.out.println("\n=== MENU PRINCIPAL - SISTEMA DE VACUNACION ===");
+        System.out.println("1. Perfil de Vacunacion");
+        System.out.println("2. Cobertura Demografica");
+        System.out.println("3. Avance Geografico");
         System.out.println("4. Reporte de Dosis Aplicadas");
-        System.out.println("5. Cerrar Sesión");
-        System.out.print("\nSeleccione una opción: ");
+        System.out.println("5. Cerrar Sesion");
+        System.out.print("\nSeleccione una opcion: ");
         return scanner.nextInt();
     }
 
     public void mostrarMensajeError() {
-        System.out.println("\nOpción no válida. Por favor, intente nuevamente.");
+        System.out.println("\nOpción no valida. Por favor, intente nuevamente.");
     }
 }

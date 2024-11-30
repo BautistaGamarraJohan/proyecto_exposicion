@@ -1,4 +1,3 @@
-// Vacunacion.java
 package ProyectoExposicion.modelo.entidades;
 
 public class Vacunacion {
@@ -34,7 +33,7 @@ public class Vacunacion {
         this.tipoEdad = datos[13];
     }
 
-    // Getters necesarios para los reportes
+    // Getters existentes
     public String getFechaCorte() { return fechaCorte; }
     public String getGrupoRiesgo() { return grupoRiesgo; }
     public String getEdad() { return edad; }
@@ -44,4 +43,10 @@ public class Vacunacion {
     public String getDepartamento() { return departamento; }
     public String getProvincia() { return provincia; }
     public String getDistrito() { return distrito; }
+    public String getUuid() { return uuid; }
+    public String getDiresa() { return diresa; }
+    public String getClasificacionVacuna() { return clasificacionVacuna; }
+    public String getTipoEdad() { return tipoEdad; }
+    // Agregar este nuevo getter
+    public String getFabricante() { return fabricante; }
 }
