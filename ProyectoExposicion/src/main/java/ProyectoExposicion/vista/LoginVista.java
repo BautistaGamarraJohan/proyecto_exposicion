@@ -20,7 +20,7 @@ public class LoginVista {
     }
 
     public void mostrarError() {
-        System.out.println("Error: Usuario o contraseña incorrectos");
+        System.out.println("Error: Usuario o contrasena incorrectos");
         System.out.println("Por favor, intente nuevamente");
     }
 

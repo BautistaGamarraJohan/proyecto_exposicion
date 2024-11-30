@@ -37,7 +37,7 @@ public class MenuPrincipalControlador {
                     break;
                 case 5:
                     salir = true;
-                    System.out.println("\nCerrando sesión...");
+                    System.out.println("\nCerrando sesion...");
                     break;
                 default:
                     menuVista.mostrarMensajeError();

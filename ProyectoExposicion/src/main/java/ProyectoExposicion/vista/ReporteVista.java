@@ -14,13 +14,13 @@ public class ReporteVista {
                                       Map<String, Integer> distribucionClasificacion,
                                       Map<String, Integer> distribucionTipoEdad) {
         System.out.println("\n" + LINEA);
-        System.out.println("               PERFIL DE VACUNACIÓN                ");
+        System.out.println("               PERFIL DE VACUNACION                ");
         System.out.println(LINEA);
         
         System.out.println("\nTotal de Vacunados: " + formatoNumero.format(totalVacunados));
         
         System.out.println("\n" + LINEA);
-        System.out.println("          DISTRIBUCIÓN POR GRUPO DE RIESGO          ");
+        System.out.println("          DISTRIBUCION POR GRUPO DE RIESGO          ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : distribucionGrupos.entrySet()) {
@@ -34,7 +34,7 @@ public class ReporteVista {
         }
 
         System.out.println("\n" + LINEA);
-        System.out.println("             DISTRIBUCIÓN POR DIRESA                ");
+        System.out.println("             DISTRIBUCION POR DIRESA                ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : distribucionDiresa.entrySet()) {
@@ -44,7 +44,7 @@ public class ReporteVista {
         }
 
         System.out.println("\n" + LINEA);
-        System.out.println("         DISTRIBUCIÓN POR CLASIFICACIÓN             ");
+        System.out.println("         DISTRIBUCION POR CLASIFICACIÓN             ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : distribucionClasificacion.entrySet()) {
@@ -67,11 +67,11 @@ public class ReporteVista {
     public void mostrarCoberturaDemografica(Map<String, Integer> distribucionSexo,
                                           Map<String, Integer> distribucionEdad) {
         System.out.println("\n" + LINEA);
-        System.out.println("             COBERTURA DEMOGRÁFICA                 ");
+        System.out.println("             COBERTURA DEMOGRAFICA                 ");
         System.out.println(LINEA);
         
         System.out.println("\n" + LINEA);
-        System.out.println("            DISTRIBUCIÓN POR SEXO                  ");
+        System.out.println("            DISTRIBUCION POR SEXO                  ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : distribucionSexo.entrySet()) {
@@ -81,7 +81,7 @@ public class ReporteVista {
         }
 
         System.out.println("\n" + LINEA);
-        System.out.println("         DISTRIBUCIÓN POR GRUPOS DE EDAD           ");
+        System.out.println("         DISTRIBUCION POR GRUPOS DE EDAD           ");
         System.out.println(LINEA + "\n");
         
         List<Map.Entry<String, Integer>> gruposEdadOrdenados = new ArrayList<>(distribucionEdad.entrySet());
@@ -106,11 +106,11 @@ public class ReporteVista {
                                       Map<String, Integer> porProvincia,
                                       Map<String, Integer> porDistrito) {
         System.out.println("\n" + LINEA);
-        System.out.println("              AVANCE GEOGRÁFICO                    ");
+        System.out.println("              AVANCE GEOGRAFICO                    ");
         System.out.println(LINEA);
         
         System.out.println("\n" + LINEA);
-        System.out.println("            VACUNACIÓN POR DEPARTAMENTO            ");
+        System.out.println("            VACUNACION POR DEPARTAMENTO            ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : porDepartamento.entrySet()) {
@@ -120,7 +120,7 @@ public class ReporteVista {
         }
         
         System.out.println("\n" + LINEA);
-        System.out.println("            VACUNACIÓN POR PROVINCIA               ");
+        System.out.println("            VACUNACION POR PROVINCIA               ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : porProvincia.entrySet()) {
@@ -130,7 +130,7 @@ public class ReporteVista {
         }
         
         System.out.println("\n" + LINEA);
-        System.out.println("            VACUNACIÓN POR DISTRITO                ");
+        System.out.println("            VACUNACION POR DISTRITO                ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : porDistrito.entrySet()) {
@@ -147,7 +147,7 @@ public class ReporteVista {
         System.out.println("            REPORTE DE DOSIS APLICADAS             ");
         System.out.println(LINEA);
         
-        System.out.println("\nDistribución por Tipo de Dosis:");
+        System.out.println("\nDistribucion por Tipo de Dosis:");
         for (Map.Entry<String, Integer> entry : distribucionDosis.entrySet()) {
             String nombreDosis;
             switch (entry.getKey()) {
@@ -166,7 +166,7 @@ public class ReporteVista {
         }
 
         System.out.println("\n" + LINEA);
-        System.out.println("          DISTRIBUCIÓN POR FABRICANTE              ");
+        System.out.println("          DISTRIBUCION POR FABRICANTE              ");
         System.out.println(LINEA + "\n");
         
         for (Map.Entry<String, Integer> entry : distribucionFabricante.entrySet()) {
